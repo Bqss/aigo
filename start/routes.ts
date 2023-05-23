@@ -18,14 +18,17 @@
 |
 */
 
-import Route from '@ioc:Adonis/Core/Route'
+import Route from "@ioc:Adonis/Core/Route";
 
-Route.get('/', async ({ view }) => {
-  return view.render('welcome')
-})
+Route.get("/", async ({ view }) => {
+  return view.render("login");
+});
 
-Route.get('/login', 'AuthController.loginPage')
-Route.post('/login', 'AuthController.login')
+Route.get("/login", "AuthController.loginPage");
+Route.post("/login", "AuthController.login");
 
-Route.get('/register', 'AuthController.regisPage')
-Route.post('/register', 'AuthController.register')
+Route.get("/register", "AuthController.regisPage");
+Route.post("/register", "AuthController.register");
+
+Route.get("/home", "AuthController.homePage");
+Route.post("/home", "AuthController.home");
