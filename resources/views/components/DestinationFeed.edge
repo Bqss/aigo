@@ -1,0 +1,12 @@
+<div class="px-1">
+  {{{await $slots.main()}}}
+  <div class="flex flex-col gap-0.5 text-sm items-start mt-2">
+    <p class="font-medium ">{{title}}</p>
+    <p class="text-xs">{{desc}}</p>
+    @component("components.Link",{
+      to : detail
+    })
+      Detail
+    @end
+  </div>
+</div>

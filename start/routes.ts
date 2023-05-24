@@ -18,21 +18,32 @@
 |
 */
 
-import Route from '@ioc:Adonis/Core/Route'
+import Route from "@ioc:Adonis/Core/Route";
 
-Route.get('/', async ({ view }) => {
-  return view.render('welcome')
-})
+Route.get("/", async ({ view }) => {
+  return view.render("login");
+});
 
-Route.get('/dashboard', 'AuthController.dashboard')
+Route.get("/login", "AuthController.loginPage");
+Route.post("/login", "AuthController.login");
 
-Route.post('/logout', async ({ auth, response }) => {
-  await auth.use('web').logout()
-  response.redirect('/login')
-})
+Route.get("/register", "AuthController.regisPage");
+Route.post("/register", "AuthController.register");
 
-Route.get('/login', 'AuthController.loginPage')
-Route.post('/login', 'AuthController.login')
+Route.get("/home", "AuthController.homePage");
+Route.post("/home", "AuthController.home");
 
-Route.get('/register', 'AuthController.regisPage')
-Route.post('/register', 'AuthController.register')
+Route.get("/smart_translator", "SmartTranslaterController.index");  
+
+
+Route.get("/budget_management", "BudgetManagementController.index");  
+
+Route.get("/travel_recomendation", "TravelRecomendationController.index");  
+Route.get("/travel_recomendation/:category", "TravelRecomendationController.category");  
+
+Route.get("/food_and_souvenier", "SmartTranslaterController.index");  
+
+Route.get("/tourism_forum", "SmartTranslaterController.index");  
+
+
+

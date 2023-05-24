@@ -1,0 +1,84 @@
+@layout('layouts.main')
+
+@set('title', "AigoApps | Home")
+
+@section('body')
+@include('components/header')
+
+<div class="pb-10">
+  <div class="h-[40vh] ">
+    <img src="/images/baliview.jpg" class="w-full h-full object-cover" alt="Banner">
+  </div>
+  <section class="p-4">
+    <div class="grid grid-cols-4 gap-4 items-center">
+      @!component('components.menu',{
+      'icon' : '/images/translate.png',
+      'label' : 'Smart Translator',
+      'link' : '/smart_translator'
+      })
+      @!component('components.menu',{
+      'icon' : '/images/travel.png',
+      'label' : 'Travel Recomendation',
+      'link' : '/travel_recomendation'
+      }) 
+      @!component('components.menu',{
+      'icon' : '/images/food.png',
+      'label' : 'Food and Sovernier',
+      'link' : ""
+      })
+      @!component('components.menu',{
+      'icon' : '/images/budget.png',
+      'label' : 'Budget Management',
+      'link' : ""
+      })
+      @!component('components.menu',{
+      'icon' : '/images/forum.png',
+      'label' : 'Tourist Forum',
+      'link' : ""
+      })
+    </div>
+
+  </section>
+
+  <section class="mt-4">
+    <h3 class="text-center text-lg font-bold ">Popular Destination</h3>
+    <div class="flex flex-col mt-5 px-1 ">
+      @component('components/DestinationFeed',{
+      title:'Ubud Air Baloon',
+      desc:'Ubud tour destination.',
+      detail:'/sdf'
+      })
+        @!vignetteImage({
+          src:'/images/baliview.jpg',
+          alt:'Ubud Air Baloon'
+        })
+      @end
+    </div>
+  </section>
+</div>
+
+
+
+
+@end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

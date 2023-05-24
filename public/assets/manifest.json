@@ -1,4 +1,7 @@
 {
-  "assets/app.css": "http://localhost:38457/assets/app.css",
-  "assets/app.js": "http://localhost:38457/assets/app.js"
+  "assets/app.css": "http://localhost:8080/assets/app.css",
+  "assets/app.js": "http://localhost:8080/assets/app.js",
+  "assets/images/bgphonelogin.png": "http://localhost:8080/assets/images/bgphonelogin.c060f1cd.png",
+  "assets/images/bgregis.png": "http://localhost:8080/assets/images/bgregis.76ad6526.png",
+  "assets/images/bglogin.png": "http://localhost:8080/assets/images/bglogin.6cc5c4a0.png"
 }
