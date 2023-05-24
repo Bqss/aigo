@@ -20,36 +20,28 @@
 
 import Route from "@ioc:Adonis/Core/Route";
 
-Route.get("/", async ({ view }) => {
-  return view.render("login");
-});
-
+Route.get("/", "AuthController.loginPage");
 Route.get("/login", "AuthController.loginPage");
 Route.post("/login", "AuthController.login");
-
 Route.get("/register", "AuthController.regisPage");
 Route.post("/register", "AuthController.register");
 
-Route.get("/home", "AuthController.homePage");
-Route.post("/home", "AuthController.home");
+Route.group(() => {
+  Route.get("/home", "AuthController.homePage");
 
-Route.get("/smart_translator", "SmartTranslaterController.index");  
+  Route.resource('/translator', 'SmartTranslaterController')
 
-
-
-
-// Route.get("/travel_recomendation", "TravelRecomendationController.index");  
-// Route.get("/travel_recomendation/:category", "TravelRecomendationController.category");  
-Route.get("/travel_recomendation/:category?/:pref?", "TravelRecomendationController.index");
-
-
-Route.get("/food_and_souvenire", "FoodAndSouvenireController.index");  
-Route.get("/food_and_souvenire/:id", "FoodAndSouvenireController.detail");
+  
+  Route.get("/travel_recomendation/:category?/:pref?", "TravelRecomendationController.index");
+  Route.get("/food_and_souvenire", "FoodAndSouvenireController.index");  
+  Route.get("/food_and_souvenire/:id", "FoodAndSouvenireController.detail");
 
 Route.get("/budget_management", "BudgetManagementController.index");  
 Route.get("/budget_management/:travelId", "BudgetManagementController.detail");  
+  Route.get("/tourist_forum", "TouristForumController.index");
+}).middleware('auth')
 
-Route.get("/tourist_forum", "TouristForumController.index");  
+  
 
 
 

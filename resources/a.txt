@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+html,
+body {
+  background-image: url("bglogin.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  color: #000000;
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #5a45ff;
+  text-decoration: none;
+}
+
+main {
+  max-width: 620px;
+  margin: auto;
+  height: 100vh;
+  padding: 0 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.login {
+  position: absolute;
+  top: 330px;
+}
+
+/* CSS untuk tampilan pada perangkat mobile */
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    background-image: url("/public/images/bgphonelogin.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Poppins", sans-serif;
+    color: #46444c;
+    position: relative;
+  }
+
+  .login {
+    position: absolute;
+    top: 480px;
+  }
+}
