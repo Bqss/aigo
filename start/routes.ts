@@ -33,7 +33,7 @@ Route.post("/register", "AuthController.register");
 Route.get("/home", "AuthController.homePage");
 
 
-Route.get("/translator", "SmartTranslaterController.index");  
+Route.resource('/translator', 'SmartTranslaterController')
 
 
 Route.get("/budget_management", "BudgetManagementController.index");  

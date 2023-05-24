@@ -38,6 +38,8 @@
     "@adonisjs/session": "^6.4.0",
     "@adonisjs/shield": "^7.1.0",
     "@adonisjs/view": "^6.2.0",
+    "bing-translate-api": "^2.9.1",
+    "language-tags": "^1.0.8",
     "luxon": "^3.3.0",
     "proxy-addr": "^2.0.7",
     "reflect-metadata": "^0.1.13",

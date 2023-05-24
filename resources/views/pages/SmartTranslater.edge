@@ -32,21 +32,26 @@
             </svg>            
           </button>
         </div>
+        <form action="/translator" method="POST">
         <div class="mt-2">
-          <textarea name="in" id="" class="bg-transparent w-full rounded-xl text-sm text-black shadow-none ring-0 border-0   resize-none overflow-auto "  rows="5"></textarea>
+          @if(textarea)
+            <textarea name="in" id="" class="bg-transparent w-full rounded-xl text-sm text-black shadow-none ring-0 border-0   resize-none overflow-auto "  rows="5">{{textarea}}</textarea>
+          @else
+            <textarea name="in" id="" class="bg-transparent w-full rounded-xl text-sm text-black shadow-none ring-0 border-0   resize-none overflow-auto "  rows="5"></textarea>
+          @endif
         </div>
         <div class="mt-2 flex items-center justify-between">
-          <button class="p-3 rounded-full bg-blue-800 text-white">
+          <button class="p-3 noA rounded-full bg-blue-800 text-white">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 fill-white ">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
             </svg>
           </button>
-          @component('components.button',{
-            className : "rounded-full"
-          })
-            <span>Translate</span>
-          @end
-          
+            @component('components.button',{
+              className : "rounded-full"
+            })
+             <span>Translate</span>
+            @end
+          </form>
         </div>
       </div>
     </div>
@@ -58,7 +63,12 @@
           </div>
         </div>
         <div class="mt-2">
-          <textarea name="in" id="" class="bg-transparent w-full rounded-xl text-sm text-black shadow-none ring-0 border-0   resize-none overflow-auto "  rows="5"></textarea>
+          @if(textarea2)
+            <textarea name="in" id="" class="bg-transparent w-full rounded-xl text-sm text-black shadow-none ring-0 border-0   resize-none overflow-auto "  rows="5">{{textarea2}}</textarea>
+          @else
+            <textarea name="in" id="" class="bg-transparent w-full rounded-xl text-sm text-black shadow-none ring-0 border-0   resize-none overflow-auto "  rows="5"></textarea>
+          @endif
+          
         </div>
 
       </div>
