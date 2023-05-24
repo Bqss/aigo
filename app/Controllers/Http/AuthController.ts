@@ -7,7 +7,7 @@ export default class AuthController {
     return view.render("auth/login");
   }
 
-  public async login({ request, response, auth }: HttpContextContract) {
+  public async login({ request, response, auth, session }: HttpContextContract) {
     let email = request.input("email");
     let pass = request.input("password");
     
@@ -15,7 +15,8 @@ export default class AuthController {
       await auth.use('web').attempt(email, pass)
       response.redirect('/home')
     } catch {
-      return response.badRequest('Invalid credentials')
+      session.flash('error', 'Email atau password salah')
+      return response.redirect('/login')
     }
   }
 
