@@ -3,7 +3,7 @@
 @set('title', "AigoApps | Home")
 
 @section('body')
-
+@include('components/header')
 
 <div class="pb-10">
   <div class="h-[40vh] ">
@@ -14,13 +14,13 @@
       @!component('components.menu',{
       'icon' : '/images/translate.png',
       'label' : 'Smart Translator',
-      'link' : ""
+      'link' : '/smart_translator'
       })
       @!component('components.menu',{
       'icon' : '/images/travel.png',
       'label' : 'Travel Recomendation',
-      'link' : ""
-      })
+      'link' : '/travel_recomendation'
+      }) 
       @!component('components.menu',{
       'icon' : '/images/food.png',
       'label' : 'Food and Sovernier',
@@ -53,8 +53,6 @@
           alt:'Ubud Air Baloon'
         })
       @end
-
-
     </div>
   </section>
 </div>

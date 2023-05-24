@@ -32,3 +32,18 @@ Route.post("/register", "AuthController.register");
 
 Route.get("/home", "AuthController.homePage");
 Route.post("/home", "AuthController.home");
+
+Route.get("/smart_translator", "SmartTranslaterController.index");  
+
+
+Route.get("/budget_management", "BudgetManagementController.index");  
+
+Route.get("/travel_recomendation", "TravelRecomendationController.index");  
+Route.get("/travel_recomendation/:category", "TravelRecomendationController.category");  
+
+Route.get("/food_and_souvenier", "SmartTranslaterController.index");  
+
+Route.get("/tourism_forum", "SmartTranslaterController.index");  
+
+
+

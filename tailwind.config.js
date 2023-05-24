@@ -7,11 +7,15 @@ module.exports = {
     extend: {
         maxWidth : {
             "container" : "400px" 
+        },
+        fontFamily : {
+            "noto-sans" : "Noto Sans , sans-serif",
         }
     },
   },
   plugins: [
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
+    require("tailwind-scrollbar")
   ],
 }
 

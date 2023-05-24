@@ -26,6 +26,6 @@ export default class AuthController {
   public async destroy({}: HttpContextContract) {}
 
   public async homePage({ view }: HttpContextContract) {
-    return view.render("auth/home");
+    return view.render("pages/home");
   }
 }
