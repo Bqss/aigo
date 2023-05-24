@@ -36,7 +36,7 @@ Route.post("/home", "AuthController.home");
 Route.get("/smart_translator", "SmartTranslaterController.index");  
 
 
-Route.get("/budget_management", "BudgetManagementController.index");  
+
 
 // Route.get("/travel_recomendation", "TravelRecomendationController.index");  
 // Route.get("/travel_recomendation/:category", "TravelRecomendationController.category");  
@@ -44,7 +44,10 @@ Route.get("/travel_recomendation/:category?/:pref?", "TravelRecomendationControl
 
 
 Route.get("/food_and_souvenire", "FoodAndSouvenireController.index");  
-Route.get("/food_and_souvenire/:id", "FoodAndSouvenireController.detail");  
+Route.get("/food_and_souvenire/:id", "FoodAndSouvenireController.detail");
+
+Route.get("/budget_management", "BudgetManagementController.index");  
+Route.get("/budget_management/:travelId", "BudgetManagementController.detail");  
 
 Route.get("/tourist_forum", "TouristForumController.index");  
 

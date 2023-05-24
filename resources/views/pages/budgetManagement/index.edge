@@ -1,0 +1,30 @@
+@layout('layouts.main')
+
+@set('title', "AigoApps | Home")
+
+@section('body')
+@!component('components.header2',{
+title : "Budget Management"
+})
+
+<div class="flex flex-col divide-y-2 divide-gray-300">
+  @each(item in tv)
+  <a href="budget_management/{{item.id}}">
+    <div class="flex p-2 gap-3">
+      <div class="basis-1/4 flex-shrink-0">
+        <img src="{{item.image}}" class="" alt="">
+      </div>
+      <div class="basis-auto">
+        <h4 class="font-medium text-sm ">{{item.name}}</h4>
+        <p class="text-xs">{{item.tags}}</p>
+        <span class="text-xs">{{item.regency}}</span>
+      </div>
+    </div>
+  </a>
+  @end
+</div>
+
+
+
+
+@end

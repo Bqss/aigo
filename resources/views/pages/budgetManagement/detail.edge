@@ -1,0 +1,80 @@
+@layout('layouts.main')
+
+@set('title', "AigoApps | Home")
+
+@section('body')
+@!component('components.header2',{
+title : "Budget Management"
+})
+
+<div>
+  <div>
+    <img src="{{travelDetail.image}}" class="aspect-video object-cover" alt="">
+  </div>
+  <div class=" px-6  py-3 flex justify-between border-2 border-gray-200  ">
+    <div class="flex flex-col items-center gap-1 justify-start">
+      <button class="bg-red-700 p-3 rounded-2xl shadow-lg fill-white">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-10 h-10" id="food">
+          <path
+            d="M32,13A19,19,0,1,0,51,32,19.021,19.021,0,0,0,32,13Zm0,36A17,17,0,1,1,49,32,17.019,17.019,0,0,1,32,49Z">
+          </path>
+          <path
+            d="M13 21V11H11v9H10V11H8v9H7V11H5v9H4V11H2V26a3.006 3.006 0 0 0 2 2.829V52a3 3 0 0 0 3 3H8a3 3 0 0 0 3-3V28.829A3.006 3.006 0 0 0 13 26zm-2 5a1 1 0 0 1-1 1 1 1 0 0 0-1 1V52a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V28a1 1 0 0 0-1-1 1 1 0 0 1-1-1V22h7zM61 10a9.01 9.01 0 0 0-9 9V32a3 3 0 0 0 3 3V54a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V11A1 1 0 0 0 61 10zM60 53H57V34a1 1 0 0 0-1-1H55a1 1 0 0 1-1-1V19a7.011 7.011 0 0 1 6-6.929z">
+          </path>
+          <rect width="2" height="15" x="55" y="16"></rect>
+          <path d="M32,22A10,10,0,1,0,42,32,10.011,10.011,0,0,0,32,22Zm0,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,32,40Z">
+          </path>
+        </svg>
+      </button>
+      <span class="text-xs font-medium">Food</span>
+    </div>
+    <div class="flex flex-col items-center gap-1 justify-start">
+      <button class="bg-yellow-500 p-3 rounded-2xl shadow-lg text-gray-50 ">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-10 h-10">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+        </svg>
+      </button>
+      <span class="text-xs font-medium">Hotel</span>
+    </div>
+
+    <div class="flex flex-col items-center gap-1 justify-start">
+      <button class="bg-green-500 p-3 rounded-2xl shadow-lg text-gray-200 ">
+        <svg fill="#ffffff" class="w-10 h-10" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330.003 330.003" xml:space="preserve">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path id="XMLID_534_"
+              d="M315.828,165.105c-9.765-9.995-23.272-15.063-40.144-15.064c-0.001,0-0.001,0-0.002,0L260,150.038 l-0.001-19.362c0.034-3.063-0.366-21.475-14.175-35.61c-9.765-9.996-23.272-15.065-40.147-15.065h-1.014v-45c0-8.284-6.716-15-15-15 h-80c-8.284,0-15,6.716-15,15v45h-1.016c-16.875,0-30.383,5.068-40.148,15.065c-13.808,14.135-14.208,32.547-14.174,35.61l0,20.849 c-10.05,2.184-18.475,6.71-25.149,13.542C0.364,179.205-0.033,197.623,0.002,200.679v59.323c0,8.284,6.716,15,15,15h37.302 c6.386,20.264,25.352,35,47.698,35c22.346,0,41.312-14.736,47.698-34.999h34.604c6.387,20.263,25.352,34.999,47.698,34.999 s41.313-14.736,47.698-35h37.302c8.284,0,15-6.716,15-15v-59.284C330.036,197.662,329.639,179.244,315.828,165.105z M226.814,119.24 c2.912,4.894,3.163,10.303,3.184,11.075c-0.005,0.114,0.001,0.049,0.001,0.255L230,150.033l-59.998-0.011v-40.021h19.661h16.014 C221.317,110.002,225.455,116.955,226.814,119.24z M124.663,50.002h50v30h-50V50.002z M74.959,116.03 c3.908-4,10.195-6.028,18.688-6.028h16.016h30.339v40.015l-70.677-0.013l0-19.434c0-0.117-0.001-0.234-0.004-0.351 C69.319,130.137,69.471,121.648,74.959,116.03z M35.636,186.03c3.908-4,10.195-6.028,18.688-6.028l221.352,0.039 c0.001,0,0.002,0,0.003,0c15.641,0,19.778,6.953,21.138,9.238c2.912,4.893,3.163,10.302,3.184,11.075 c-0.005,0.114,0.001,0.049,0.001,0.255v44.393H277.7c-6.387-20.264-25.352-35-47.698-35s-41.311,14.737-47.698,35.001H147.7 c-6.386-20.264-25.352-35.001-47.698-35.001c-22.346,0-41.311,14.736-47.698,35H30.002V200.57c0-0.117-0.002-0.234-0.004-0.351 C29.996,200.137,30.148,191.648,35.636,186.03z M100.002,280.002c-11.028,0-20-8.972-20-19.999c0-11.029,8.972-20.001,20-20.001 s20,8.972,20,20.001C120.002,271.03,111.029,280.002,100.002,280.002z M230.002,280.002c-11.028,0-20-8.972-20-19.999 c0-11.029,8.972-20.001,20-20.001c11.028,0,20,8.972,20,20.001C250.002,271.03,241.03,280.002,230.002,280.002z">
+            </path> 
+          </g>
+        </svg>
+      </button>
+      <span class="text-xs font-medium">Transport</span>
+    </div>
+    <div class="flex flex-col items-center gap-1 justify-start">
+      <button class="bg-green-500 p-3 rounded-2xl shadow-lg text-gray-200 ">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>        
+      </button>
+      <span class="text-xs font-medium">Total</span>
+    </div>
+
+  </div>
+  <div class="mt-4 pb-10">
+    <div class="px-4 flex flex-col gap-0.5">
+      <img src="{{foodDetail.image}}" class="rounded-lg" alt="">
+      <h3 class="font-bold mt-2 text-sm">{{foodDetail.product}}</h3>
+      <p class="text-xs text-gray-600 line-clamp-2">{{foodDetail.desc}}</p>
+      <p class="text-sm font-medium">{{foodDetail.avgPrice}}</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+@end
