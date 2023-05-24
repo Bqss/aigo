@@ -1,22 +1,31 @@
 import type { HttpContextContract } from "@ioc:Adonis/Core/HttpContext";
+import User from 'App/Models/User'
+
 
 export default class AuthController {
   public async loginPage({ view }: HttpContextContract) {
     return view.render("auth/login");
   }
 
-  public async login({ request }: HttpContextContract) {
+  public async login({ request, response, auth }: HttpContextContract) {
     let email = request.input("email");
     let pass = request.input("password");
-    return `${email} and ${pass}`;
+    
+    try {
+      await auth.use('web').attempt(email, pass)
+      response.redirect('/')
+    } catch {
+      return response.badRequest('Invalid credentials')
+    }
   }
 
   public async regisPage({ view }: HttpContextContract) {
     return view.render("auth/register");
   }
 
-  public async register({ request }: HttpContextContract) {
-    return request.all();
+  public async register({ request, response }: HttpContextContract) {
+    await User.create(request.all())
+    return response.redirect().toPath('/login')
   }
 
   public async edit({}: HttpContextContract) {}
