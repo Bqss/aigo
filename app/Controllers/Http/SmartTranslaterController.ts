@@ -30,4 +30,6 @@ export default class SmartTranslaterController {
     // });
     return response.redirect().toRoute('SmartTranslaterController.show', { id: request.input('in') })
   }
+
+
 }
