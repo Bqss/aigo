@@ -1,0 +1,39 @@
+@layout('layouts.main')
+
+@set('title', "AigoApps | Home")
+
+@section('body')
+@!component('components.header2',{
+title : "FoodAndSouvenire"
+})
+
+<div class="pb-5 ">
+  <div>
+    <img src="{{foodDetail.image}}" class="aspect-square object-cover">
+  </div>
+  <div class="p-3 ">
+    <div class="flex justify-between items-center">
+      <div>
+        <span class="text-sm font-bold">{{foodDetail.name}}</span>
+        <h2 class="text-2xl font-bold">{{foodDetail.product}}</h2>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-medium text-sm">Price</span>
+        <span class="font-bold">{{foodDetail.avgPrice}}</span>
+      </div>
+    </div>
+    <p class="mt-2  text-sm text-gray-500 line-clamp-3">{{foodDetail.desc}}</p>
+
+    <p class="mt-3 text-sm font-medium">Regency : <span>{{foodDetail.regency}}</span></p>
+    @component('components.button',{
+    title : "Show Location",
+    className : "rounded-xl mt-3 "
+    })
+    Show Location
+    @end
+
+
+  </div>
+</div>
+
+@end

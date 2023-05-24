@@ -38,12 +38,15 @@ Route.resource('/translator', 'SmartTranslaterController')
 
 Route.get("/budget_management", "BudgetManagementController.index");  
 
-Route.get("/travel_recomendation", "TravelRecomendationController.index");  
-Route.get("/travel_recomendation/:category", "TravelRecomendationController.category");  
+// Route.get("/travel_recomendation", "TravelRecomendationController.index");  
+// Route.get("/travel_recomendation/:category", "TravelRecomendationController.category");  
+Route.get("/travel_recomendation/:category?/:pref?", "TravelRecomendationController.index");
 
-Route.get("/food_and_souvenier", "SmartTranslaterController.index");  
 
-Route.get("/tourism_forum", "SmartTranslaterController.index");  
+Route.get("/food_and_souvenire", "FoodAndSouvenireController.index");  
+Route.get("/food_and_souvenire/:id", "FoodAndSouvenireController.detail");  
+
+Route.get("/tourist_forum", "TouristForumController.index");  
 
 
 
