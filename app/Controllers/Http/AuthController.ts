@@ -13,7 +13,7 @@ export default class AuthController {
     
     try {
       await auth.use('web').attempt(email, pass)
-      response.redirect('/')
+      response.redirect('/home')
     } catch {
       return response.badRequest('Invalid credentials')
     }

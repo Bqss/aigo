@@ -31,9 +31,9 @@ Route.get("/register", "AuthController.regisPage");
 Route.post("/register", "AuthController.register");
 
 Route.get("/home", "AuthController.homePage");
-Route.post("/home", "AuthController.home");
 
-Route.get("/smart_translator", "SmartTranslaterController.index");  
+
+Route.get("/translator", "SmartTranslaterController.index");  
 
 
 Route.get("/budget_management", "BudgetManagementController.index");  
