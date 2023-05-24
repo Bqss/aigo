@@ -21,6 +21,13 @@ let SpeechRecognition =
   recording = false;
 
   function speechToText() {
+    document.getElementById("sttBut").classList.add("bg-red-800")
+    var svgPause = document.getElementById("sttSVG");
+    svgPause.innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
+    <path fill-rule="evenodd" d="M4.5 7.5a3 3 0 013-3h9a3 3 0 013 3v9a3 3 0 01-3 3h-9a3 3 0 01-3-3v-9z" clip-rule="evenodd" />
+  </svg>
+  
+  `
     // console.log("hahah")
     try {
       recognition = new SpeechRecognition();
@@ -47,9 +54,22 @@ let SpeechRecognition =
         }
       };
       recognition.onspeechend = () => {
+        document.getElementById("sttBut").classList.remove("bg-red-800")
+        var svgNormal = document.getElementById("sttSVG");
+        svgNormal.innerHTML=`<svg id="sttSVG" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 fill-white ">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+        </svg>
+      `
         speechToText();
       };
       recognition.onerror = (event) => {
+        document.getElementById("sttBut").classList.remove("bg-red-800")
+        document.getElementById("sttBut").classList.remove("bg-red-800")
+        var svgNormal = document.getElementById("sttSVG");
+        svgNormal.innerHTML=`<svg id="sttSVG" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 fill-white ">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+        </svg>
+      `
         stopRecording();
         if (event.error === "no-speech") {
           alert("No speech was detected. Stopping...");
@@ -60,9 +80,9 @@ let SpeechRecognition =
         } else if (event.error === "not-allowed") {
           alert("Permission to use microphone is blocked.");
         } else if (event.error === "aborted") {
-          alert("Listening Stopped.");
+          // alert("Listening Stopped.");
         } else {
-          alert("Error occurred in recognition: " + event.error);
+          // alert("Error occurred in recognition: " + event.error);
         }
       };
     } catch (error) {
