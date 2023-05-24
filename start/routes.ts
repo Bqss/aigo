@@ -24,6 +24,13 @@ Route.get('/', async ({ view }) => {
   return view.render('welcome')
 })
 
+Route.get('/dashboard', 'AuthController.dashboard')
+
+Route.post('/logout', async ({ auth, response }) => {
+  await auth.use('web').logout()
+  response.redirect('/login')
+})
+
 Route.get('/login', 'AuthController.loginPage')
 Route.post('/login', 'AuthController.login')
 
