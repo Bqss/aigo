@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+  @entryPointStyles('app')
+  @entryPointScripts('app')
+</head>
+<body class="bg-black">
+  <div class="max-w-container relative mx-auto bg-gray-100  ">
+    @include('components/header')
+    @!section('body')
+    @include('components/footer')
+  </div>
+</body>
+</html>

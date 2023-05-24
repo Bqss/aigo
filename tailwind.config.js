@@ -4,7 +4,11 @@ module.exports = {
     "./resources/**/*.{edge,js,ts,jsx,tsx,vue}",
   ],
   theme: {
-    extend: {},
+    extend: {
+        maxWidth : {
+            "container" : "400px" 
+        }
+    },
   },
   plugins: [
     require('flowbite/plugin')
