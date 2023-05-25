@@ -3,7 +3,7 @@
 @section('body')
   @!component('components.header2',{title : 'Travel Recomendation'})
   <div class="mt-8 px-3 pb-10">
-    <h3 class="text-lg font-medium text-center ">Hi, {{users.firstname}}!</h3>
+    <h3 class="text-lg font-medium text-center ">Hi, {{{users?.firstname||"Nando"}}}!</h3>
     <p class="text-xs mt-4">Pilih salah satu dari kategori berikut</p>
     <div class="flex flex-col gap-3 mt-4">
       @each(category in categories)

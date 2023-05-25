@@ -45,7 +45,7 @@ a {
 
 .login {
   position: absolute;
-  top: 330px;
+  top: 100px;
 }
 
 /* CSS untuk tampilan pada perangkat mobile */
@@ -60,6 +60,6 @@ a {
 
   .login {
     position: absolute;
-    top: 480px;
+    top: 460px;
   }
 }
