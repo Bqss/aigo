@@ -1,5 +1,17 @@
 import '../css/app.css'
-import 'flowbite';
+// import 'flowbite';
+import Alpine from "alpinejs"
+import Tabs from "./components/Tabs"
+window.Alpine = Alpine;
+
+Alpine.data("tabs",Tabs);
+
+
+Alpine.start();
+
+
+
+
 
 
 const pt = document.getElementsByClassName("noA");
