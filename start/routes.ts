@@ -32,7 +32,9 @@ Route.group(() => {
   Route.resource('/translator', 'SmartTranslaterController')
 
   Route.get("/budget_management", "BudgetManagementController.index");  
+
   Route.get("/travel_recomendation/:category?/:pref?", "TravelRecomendationController.index");
+
   Route.get("/food_and_souvenire", "FoodAndSouvenireController.index");  
   Route.get("/food_and_souvenire/:id", "FoodAndSouvenireController.detail");  
   Route.get("/tourist_forum", "TouristForumController.index");
