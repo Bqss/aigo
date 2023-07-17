@@ -11,17 +11,17 @@ const categories = [
   {
     image : "/images/imgtravel/5.webp",
     category : "Nature",
-    desc : "Wisata yang cocok untuk keluarga"
+    desc : "Wisata buat yang suka seger-seger"
   },
   {
     image : "/images/imgtravel/15.webp",
     category : "Education",
-    desc : "Wisata yang cocok untuk keluarga"
+    desc : "wisata sambil belajar, why not?"
   },
   {
     image : "/images/imgtravel/12.webp",
     category : "Shopping",
-    desc : "Wisata yang cocok untuk keluarga"
+    desc : "wisata sambil belanja? , bisa aja!"
   }
 ];
 

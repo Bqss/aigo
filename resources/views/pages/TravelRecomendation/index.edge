@@ -7,15 +7,15 @@
     <p class="text-xs mt-4">Pilih salah satu dari kategori berikut</p>
     <div class="flex flex-col gap-3 mt-4">
       @each(category in categories)
-        <div class="bg-white p-3 rounded-xl flex gap-3">
+        <div class="bg-white p-3 rounded-xl flex gap-5">
           <div class="basis-2/6 flex-shrink-0">
             <img src="{{category.image}}"  class="aspect-square object-cover rounded-xl w-full" alt="">
           </div>
           <div class="basis-auto text-sm flex flex-col items-start gap-0.5 justify-center">
-            <h4 class="font-bold text-xs ">{{category.category}}</h4>  
+            <h4 class="font-bold text-sm ">{{category.category}}</h4>  
             <p class="truncate text-xs">{{category.desc}}</p>
             @component('components.Link',{
-              className : "rounded-lg text-xs py-1 rounded-xl",
+              className : "rounded-lg text-xs py-[0.4rem] rounded-xl",
               to : "travel_recomendation/" + category.category?.split(" ").join("_").toLowerCase(),
             })
               Pilih
